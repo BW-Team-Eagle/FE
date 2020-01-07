@@ -11,8 +11,8 @@ export default {
     '6.4rem'
   ],
   colors: {
-    blue: '#07c',
-    lightgray: '#f6f6ff'
+    background: '#F9F5E0',
+    primary: '#463F1A'
   },
   space: [
     0,
