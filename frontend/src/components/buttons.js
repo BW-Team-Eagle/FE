@@ -13,25 +13,28 @@ const primaryButton = {
   }
 };
 
-export const TakeItemButton = () => (
+export const TakeItemButton = ({ clicked }) => (
   <Button
+    onClick={clicked}
     sx={{
       ...primaryButton,
-      fontSize: 2,
+      fontSize: 1,
+      alignItems: 'center',
       py: 1,
       px: 2,
       ml: 3
     }}
   >
-    <Box mr={2}>
+    <Box mr={1}>
       <FontAwesomeIcon icon={faHandPaper} />
     </Box>
-    Take
+    Take Item
   </Button>
 );
 
-export const MoveButton = ({ icon, direction }) => (
+export const MoveButton = ({ clicked, icon, direction }) => (
   <Button
+    onClick={clicked}
     sx={{
       ...primaryButton,
       fontSize: 3,

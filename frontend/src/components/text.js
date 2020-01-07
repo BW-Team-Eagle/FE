@@ -1,6 +1,20 @@
 import React from 'react';
 import { Text } from 'rebass';
 
+//SIDEBAR
+export const SidebarItemText = props => (
+  <Text
+    sx={{
+      color: 'white',
+      fontFamily: 'heading'
+    }}
+    {...props}
+  >
+    {props.children}
+  </Text>
+);
+
+// MAIN SECTION
 export const RoomDescription = ({ sx, children }) => (
   <Text
     as='p'

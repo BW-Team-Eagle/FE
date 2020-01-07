@@ -11,7 +11,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 const RoomActionSection = ({ title, children }) => (
-  <Box mt={4}>
+  <Box mb={4}>
     <RoomActionTitle>{title}</RoomActionTitle>
     {children}
   </Box>
@@ -41,7 +41,7 @@ const InGamePage = () => {
       sx={{
         flexDirection: 'column',
         justifyContent: 'center',
-        pb: 5,
+        pb: 4,
         px: 5
       }}
     >
@@ -50,7 +50,8 @@ const InGamePage = () => {
       <RoomDescription
         sx={{
           mt: 4,
-          pr: 6
+          pr: 5,
+          mb: 4
         }}
       >
         Lorem ipsum dolor amet stumptown hexagon selvage fanny pack sartorial
@@ -60,11 +61,6 @@ const InGamePage = () => {
         viral, tacos plaid hella whatever kale chips.
       </RoomDescription>
 
-      <RoomActionSection title='Available Items:'>
-        <Item name='Sword' />
-        <Item name='Sawed-off Shotgun' />
-        <Item name='Rusty Lantern' />
-      </RoomActionSection>
       <RoomActionSection title='Move Player:'>
         <Flex>
           <MoveButton icon={faArrowUp} direction='North' />
@@ -72,6 +68,12 @@ const InGamePage = () => {
           <MoveButton icon={faArrowRight} direction='East' />
           <MoveButton icon={faArrowLeft} direction='West' />
         </Flex>
+      </RoomActionSection>
+
+      <RoomActionSection title='Available Items:'>
+        <Item name='Sword' />
+        <Item name='Sawed-off Shotgun' />
+        <Item name='Rusty Lantern' />
       </RoomActionSection>
     </Flex>
   );

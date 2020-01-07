@@ -25,3 +25,16 @@ export const RoomActionTitle = ({ children }) => (
     {children}
   </Heading>
 );
+
+export const SidebarSectionTitle = ({ children }) => (
+  <Heading
+    as='h4'
+    sx={{
+      fontSize: 4,
+      color: 'background',
+      mb: 2
+    }}
+  >
+    {children}
+  </Heading>
+);
