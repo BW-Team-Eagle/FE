@@ -2,6 +2,13 @@ import React from 'react';
 import { Box, Flex } from 'rebass';
 import { RoomTitle, RoomActionTitle } from '../components/headings';
 import { RoomDescription, ItemName } from '../components/text';
+import { TakeItemButton, MoveButton } from '../components/buttons';
+import {
+  faArrowUp,
+  faArrowDown,
+  faArrowLeft,
+  faArrowRight
+} from '@fortawesome/free-solid-svg-icons';
 
 const RoomActionSection = ({ title, children }) => (
   <Box mt={4}>
@@ -12,24 +19,29 @@ const RoomActionSection = ({ title, children }) => (
 
 const Item = ({ name }) => (
   <Flex alignItems='center' mb={3}>
-    <Box
-      sx={{
-        height: '2.8rem',
-        width: '2.8rem',
-        bg: '#ccc',
-        borderRadius: '50%',
-        mr: 2
-      }}
-    ></Box>
-    <ItemName>{name}</ItemName>
+    <Flex>
+      <Box
+        sx={{
+          height: '2.8rem',
+          width: '2.8rem',
+          bg: '#ccc',
+          borderRadius: '50%',
+          mr: 2
+        }}
+      ></Box>
+      <ItemName>{name}</ItemName>
+      <TakeItemButton />
+    </Flex>
   </Flex>
 );
 
 const InGamePage = () => {
   return (
-    <Box
+    <Flex
       sx={{
-        py: 4,
+        flexDirection: 'column',
+        justifyContent: 'center',
+        pb: 5,
         px: 5
       }}
     >
@@ -53,8 +65,15 @@ const InGamePage = () => {
         <Item name='Sawed-off Shotgun' />
         <Item name='Rusty Lantern' />
       </RoomActionSection>
-      <RoomActionSection title='Move Player:' />
-    </Box>
+      <RoomActionSection title='Move Player:'>
+        <Flex>
+          <MoveButton icon={faArrowUp} direction='North' />
+          <MoveButton icon={faArrowDown} direction='South' />
+          <MoveButton icon={faArrowRight} direction='East' />
+          <MoveButton icon={faArrowLeft} direction='West' />
+        </Flex>
+      </RoomActionSection>
+    </Flex>
   );
 };
 
