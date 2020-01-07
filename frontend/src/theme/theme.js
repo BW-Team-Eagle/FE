@@ -11,7 +11,7 @@ export default {
     '6.4rem'
   ],
   colors: {
-    background: '#F9F5E0',
+    background: '#ebebeb',
     primary: '#463F1A'
   },
   space: [
@@ -25,7 +25,8 @@ export default {
     '25.6rem'
   ],
   fonts: {
-    body: 'system-ui, sans-serif'
+    heading: 'Barlow Condensed, sans-serif',
+    body: 'Barlow, sans-serif'
   },
   fontWeights: {
     body: 400,

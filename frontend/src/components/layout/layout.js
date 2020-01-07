@@ -4,7 +4,7 @@ import theme from '../../theme/theme';
 import { Box, Flex } from 'rebass';
 import Sidebar from './sidebar';
 
-const Layout = props => {
+const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       {/* LAYOUT CONTAINER */}
@@ -23,7 +23,9 @@ const Layout = props => {
             minHeight: '100vh',
             bg: 'background'
           }}
-        ></Flex>
+        >
+          {children}
+        </Flex>
 
         {/* SIDEBAR */}
         <Sidebar />
