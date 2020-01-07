@@ -31,7 +31,7 @@ export const SidebarSectionTitle = ({ children }) => (
     as='h4'
     sx={{
       fontSize: 4,
-      color: 'background',
+      color: 'white',
       mb: 2
     }}
   >

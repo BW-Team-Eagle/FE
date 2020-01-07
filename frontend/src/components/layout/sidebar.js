@@ -14,7 +14,9 @@ const SidebarUser = ({ username }) => (
         mr: 2
       }}
     />
-    <SidebarItemText fontSize={5}>{username}</SidebarItemText>
+    <SidebarItemText fontSize={5} color='white'>
+      {username}
+    </SidebarItemText>
   </Flex>
 );
 

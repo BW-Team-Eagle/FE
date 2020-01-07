@@ -5,8 +5,9 @@ import { Text } from 'rebass';
 export const SidebarItemText = props => (
   <Text
     sx={{
-      color: 'white',
-      fontFamily: 'heading'
+      color: 'background',
+      fontFamily: 'heading',
+      letterSpacing: '0.04rem'
     }}
     {...props}
   >
