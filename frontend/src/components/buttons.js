@@ -6,7 +6,7 @@ import { faHandPaper } from '@fortawesome/free-solid-svg-icons';
 const primaryButton = {
   display: 'flex',
   bg: 'primary',
-  color: '#ccc',
+  color: 'muted',
   ':hover': {
     color: 'white',
     cursor: 'pointer'

@@ -9,7 +9,7 @@ const SidebarUser = ({ username }) => (
       sx={{
         height: '4rem',
         width: '4rem',
-        bg: '#ccc',
+        bg: 'muted',
         borderRadius: '50%',
         mr: 2
       }}
@@ -39,7 +39,7 @@ const SidebarItem = ({ text }) => (
         height: '2.4rem',
         width: '2.4rem',
         borderRadius: '50%',
-        bg: '#ccc',
+        bg: 'muted',
         mr: 2
       }}
     />
@@ -67,8 +67,8 @@ const Sidebar = props => {
 
       <SidebarSection title='Current Players:'>
         <SidebarItem text='dvcolin' />
-        <SidebarItem text='str8 savage' />
-        <SidebarItem text='pogchamp' />
+        <SidebarItem text='User 2' />
+        <SidebarItem text='User 3' />
       </SidebarSection>
 
       <SidebarSection title='Current Items:'>

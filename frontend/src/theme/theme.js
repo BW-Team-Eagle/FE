@@ -12,7 +12,8 @@ export default {
   ],
   colors: {
     background: '#ebebeb',
-    primary: '#463F1A'
+    primary: '#25314d',
+    muted: '#dedede'
   },
   space: [
     0,

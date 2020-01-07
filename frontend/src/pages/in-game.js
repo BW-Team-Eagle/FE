@@ -24,7 +24,7 @@ const Item = ({ name }) => (
         sx={{
           height: '2.8rem',
           width: '2.8rem',
-          bg: '#ccc',
+          bg: 'muted',
           borderRadius: '50%',
           mr: 2
         }}
