@@ -34,7 +34,7 @@ const Item = ({ name }) => (
     </Flex>
   </Flex>
 );
-
+//
 const InGamePage = () => {
   return (
     <Flex
