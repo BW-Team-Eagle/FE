@@ -1,7 +1,7 @@
 import React from 'react';
 import { Flex, Box } from 'rebass';
 import { SidebarItemText } from '../text';
-import { SidebarSectionTitle } from '../headings';
+import { H4 } from '../headings';
 
 const SidebarUser = ({ username }) => (
   <Flex alignItems='center'>
@@ -27,7 +27,7 @@ const SidebarSection = ({ title, children }) => (
       mt: 4
     }}
   >
-    <SidebarSectionTitle>{title}</SidebarSectionTitle>
+    <H4>{title}</H4>
     {children}
   </Flex>
 );

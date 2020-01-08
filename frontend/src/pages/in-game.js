@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Flex } from 'rebass';
-import { RoomTitle, RoomActionTitle } from '../components/headings';
+import { H1, H3 } from '../components/headings';
 import { RoomDescription, ItemName } from '../components/text';
 import { TakeItemButton, MoveButton } from '../components/buttons';
 import {
@@ -13,7 +13,7 @@ import Sidebar from '../components/layout/sidebar';
 
 const RoomActionSection = ({ title, children }) => (
   <Box mb={4}>
-    <RoomActionTitle>{title}</RoomActionTitle>
+    <H3>{title}</H3>
     {children}
   </Box>
 );
@@ -30,7 +30,7 @@ const InGamePage = () => {
           pr: '28rem'
         }}
       >
-        <RoomTitle>Bluebird Cove</RoomTitle>
+        <H1>Bluebird Cove</H1>
 
         <RoomDescription
           sx={{

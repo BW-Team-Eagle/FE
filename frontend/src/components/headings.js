@@ -1,7 +1,7 @@
 import React from 'react';
 import { Heading } from 'rebass';
 
-export const RoomTitle = ({ children }) => (
+export const H1 = ({ children }) => (
   <Heading
     as='h1'
     sx={{
@@ -13,7 +13,7 @@ export const RoomTitle = ({ children }) => (
   </Heading>
 );
 
-export const RoomActionTitle = ({ children }) => (
+export const H3 = ({ children }) => (
   <Heading
     as='h3'
     sx={{
@@ -26,7 +26,7 @@ export const RoomActionTitle = ({ children }) => (
   </Heading>
 );
 
-export const SidebarSectionTitle = ({ children }) => (
+export const H4 = ({ children }) => (
   <Heading
     as='h4'
     sx={{

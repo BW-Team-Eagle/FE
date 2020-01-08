@@ -6,7 +6,7 @@ const LoginForm = props => (
     <Heading
       as='h3'
       sx={{
-        fontSize: 5
+        fontSize: 6
       }}
     >
       Login
