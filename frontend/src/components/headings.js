@@ -1,12 +1,13 @@
 import React from 'react';
 import { Heading } from 'rebass';
 
-export const H1 = ({ children }) => (
+export const H1 = ({ sx, children }) => (
   <Heading
     as='h1'
     sx={{
       fontSize: 6,
-      color: 'primary'
+      color: 'primary',
+      ...sx
     }}
   >
     {children}

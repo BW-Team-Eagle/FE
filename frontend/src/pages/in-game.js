@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box, Flex } from 'rebass';
 import { H1, H3 } from '../components/headings';
-import { RoomDescription, ItemName } from '../components/text';
-import { TakeItemButton, MoveButton } from '../components/buttons';
+import { RoomDescription } from '../components/text';
+import { MoveButton } from '../components/buttons';
 import {
   faArrowUp,
   faArrowDown,
