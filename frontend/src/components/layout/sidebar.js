@@ -70,12 +70,6 @@ const Sidebar = props => {
         <SidebarItem text='User 2' />
         <SidebarItem text='User 3' />
       </SidebarSection>
-
-      <SidebarSection title='Current Items:'>
-        <SidebarItem text='Sharp Rock' />
-        <SidebarItem text='Sword' />
-        <SidebarItem text='Shotgun' />
-      </SidebarSection>
     </Flex>
   );
 };

@@ -1,12 +1,23 @@
 import React from 'react';
-import Layout from './components/layout/layout';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import LoginPage from './pages/login';
 import InGamePage from './pages/in-game';
+import Layout from './components/layout/layout';
 
 const App = () => {
   return (
-    <Layout>
-      <InGamePage />
-    </Layout>
+    <BrowserRouter>
+      <Layout>
+        <Switch>
+          <Route path='/login'>
+            <LoginPage />
+          </Route>
+          <Route path='/game'>
+            <InGamePage />
+          </Route>
+        </Switch>
+      </Layout>
+    </BrowserRouter>
   );
 };
 

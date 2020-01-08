@@ -2,7 +2,6 @@ import React from 'react';
 import { ThemeProvider } from 'emotion-theming';
 import theme from '../../theme/theme';
 import { Box, Flex } from 'rebass';
-import Sidebar from './sidebar';
 
 const Layout = ({ children }) => {
   return (
@@ -14,21 +13,15 @@ const Layout = ({ children }) => {
           lineHeight: 'body'
         }}
       >
-        {/* MAIN CONTAINER */}
         <Flex
-          as='main'
           sx={{
             width: '100%',
-            pr: '28rem',
             minHeight: '100vh',
             bg: 'background'
           }}
         >
           {children}
         </Flex>
-
-        {/* SIDEBAR */}
-        <Sidebar />
       </Box>
     </ThemeProvider>
   );
