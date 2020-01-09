@@ -1,11 +1,11 @@
 import React from 'react';
-import { Flex, Button } from 'rebass';
-import { UserForm } from '../components/forms';
-import { H1 } from '../components/headings';
-import { Formik, Form, Field } from 'formik';
+import { Flex } from 'rebass';
+import { LoginForm } from '../components/forms';
 import axios from 'axios';
+import { Redirect } from 'react-router-dom';
 
 const LoginPage = props => {
+  console.log('comp props', props);
   return (
     <Flex
       sx={{
@@ -17,18 +17,13 @@ const LoginPage = props => {
         minHeight: '100vh'
       }}
     >
-      <UserForm
-        title='Login'
-        buttonText='Login'
+      <LoginForm
         onSubmit={values => {
           axios
-            .post(
-              'http://team-eagle-new-name-who-dis.herokuapp.com/api/login',
-              values
-            )
+            .post('http://localhost:8000/api/login/', values)
             .then(res => {
-              console.log(values);
-              console.log(res);
+              console.log(props);
+              props.history.push('/game');
             })
             .catch(err => {
               console.log(err);

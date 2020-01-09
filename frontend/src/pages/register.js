@@ -1,6 +1,6 @@
 import React from 'react';
 import { Flex } from 'rebass';
-import { UserForm } from '../components/forms';
+import { RegisterForm } from '../components/forms';
 import axios from 'axios';
 
 const RegisterPage = props => {
@@ -15,17 +15,13 @@ const RegisterPage = props => {
         minHeight: '100vh'
       }}
     >
-      <UserForm
-        title='Register'
-        buttonText='Register'
+      <RegisterForm
         onSubmit={values => {
           axios
-            .post(
-              'http://team-eagle-new-name-who-dis.herokuapp.com/api/registration',
-              values
-            )
+            .post('http://localhost:8000/api/registration', values)
             .then(res => {
-              console.log(res);
+              console.log(props);
+              props.history.push('/game');
             })
             .catch(err => {
               console.log(err);
