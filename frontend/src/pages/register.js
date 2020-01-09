@@ -3,7 +3,7 @@ import { Box, Flex, Button } from 'rebass';
 import { UserForm } from '../components/forms';
 import { H1 } from '../components/headings';
 
-const LoginPage = props => {
+const RegisterPage = props => {
   return (
     <Flex
       sx={{
@@ -15,9 +15,9 @@ const LoginPage = props => {
         minHeight: '100vh'
       }}
     >
-      <UserForm title='Login' buttonText='Login' />
+      <UserForm title='Register' buttonText='Submit' />
     </Flex>
   );
 };
 
-export default LoginPage;
+export default RegisterPage;

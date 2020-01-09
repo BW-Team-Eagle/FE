@@ -1,24 +1,43 @@
 import React from 'react';
-import { Label as RebassLabel, Input as RebassInput } from '@rebass/forms';
+import { Box, Flex, Button } from 'rebass';
+import { H1 } from './headings';
+import { Label, Input } from '@rebass/forms';
 
-export const Label = ({ htmlFor, children }) => (
-  <RebassLabel
-    htmlFor={htmlFor}
-    sx={{
-      fontSize: 3
-    }}
-  >
-    {children}
-  </RebassLabel>
+const Field = ({ name, type, labelText }) => (
+  <Box my={2}>
+    <Label
+      htmlFor={name}
+      sx={{
+        fontSize: 3
+      }}
+    >
+      {labelText}
+    </Label>
+
+    <Input
+      name={name}
+      type={type}
+      sx={{
+        width: '100%',
+        fontSize: 2
+      }}
+    />
+  </Box>
 );
 
-export const Input = ({ name, type }) => (
-  <RebassInput
-    name={name}
-    type={type}
-    sx={{
-      width: '100%',
-      fontSize: 2
-    }}
-  />
+export const UserForm = ({ title, buttonText }) => (
+  <Flex as='form' flexDirection='column' mx='auto' width={'40%'} p={4} pb={6}>
+    <H1
+      sx={{
+        mx: 'auto'
+      }}
+    >
+      {title}
+    </H1>
+    <Field name='username' type='text' labelText='Username' />
+    <Field name='password' type='password' labelText='Password' />
+    <Button width={2 / 3} fontSize={2} mx='auto' mt={4} type='submit'>
+      {buttonText}
+    </Button>
+  </Flex>
 );
