@@ -12,6 +12,30 @@ import {
 import Sidebar from '../components/layout/sidebar';
 import Axios from 'axios';
 
+const RoomGrid = ({ children }) => (
+  <Box
+    sx={{
+      display: 'grid',
+      width: 480,
+      height: 480,
+      gridTemplateColumns: 'repeat(10, 1fr)',
+      gridTemplateRows: 'repeat(10, 1fr)',
+      gap: 2,
+      mt: 3
+    }}
+  >
+    {children}
+  </Box>
+);
+
+const Room = () => (
+  <Box
+    sx={{
+      bg: 'primary'
+    }}
+  />
+);
+
 const RoomActionSection = ({ title, children }) => (
   <Box mb={4}>
     <H3>{title}</H3>
@@ -38,7 +62,7 @@ const InGamePage = () => {
         sx={{
           flexDirection: 'column',
           justifyContent: 'center',
-          pb: 4,
+          pt: 5,
           pl: 5,
           pr: '28rem'
         }}
@@ -67,9 +91,11 @@ const InGamePage = () => {
             <MoveButton icon={faArrowLeft} direction='West' />
           </Flex>
         </RoomActionSection>
-        {rooms.map(room => (
-          <p>{room.title}</p>
-        ))}
+        <RoomGrid>
+          {rooms.map(room => (
+            <Room />
+          ))}
+        </RoomGrid>
       </Flex>
       <Sidebar />
     </Flex>
