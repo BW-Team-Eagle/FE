@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, Flex } from 'rebass';
 import { H1, H3 } from '../components/headings';
 import { RoomDescription } from '../components/text';
@@ -10,6 +10,7 @@ import {
   faArrowRight
 } from '@fortawesome/free-solid-svg-icons';
 import Sidebar from '../components/layout/sidebar';
+import Axios from 'axios';
 
 const RoomActionSection = ({ title, children }) => (
   <Box mb={4}>
@@ -19,6 +20,18 @@ const RoomActionSection = ({ title, children }) => (
 );
 
 const InGamePage = () => {
+  const [rooms, setRooms] = useState([]);
+
+  useEffect(() => {
+    Axios.get('https://team-eagle-new-name-who-dis.herokuapp.com/api/adv/rooms')
+      .then(res => {
+        console.log(res);
+        setRooms(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, []);
   return (
     <Flex alignItems='center'>
       <Flex
@@ -54,6 +67,9 @@ const InGamePage = () => {
             <MoveButton icon={faArrowLeft} direction='West' />
           </Flex>
         </RoomActionSection>
+        {rooms.map(room => (
+          <p>{room.title}</p>
+        ))}
       </Flex>
       <Sidebar />
     </Flex>

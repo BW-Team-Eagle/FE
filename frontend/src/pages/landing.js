@@ -12,7 +12,7 @@ const LandingButton = ({ to, text }) => (
       fontSize: 4,
       bg: 'primary',
       color: 'muted',
-      my: 3,
+      mt: 4,
       ':hover': {
         color: 'white'
       }
@@ -28,7 +28,7 @@ const LandingPage = props => {
       sx={{
         flexDirection: 'column',
         justifyContent: 'center',
-        pb: 4,
+        pb: 6,
         px: 5,
         width: '100%',
         minHeight: '100vh'

@@ -1,7 +1,9 @@
 import React from 'react';
-import { Box, Flex, Button } from 'rebass';
+import { Flex, Button } from 'rebass';
 import { UserForm } from '../components/forms';
 import { H1 } from '../components/headings';
+import { Formik, Form, Field } from 'formik';
+import axios from 'axios';
 
 const LoginPage = props => {
   return (
@@ -15,7 +17,24 @@ const LoginPage = props => {
         minHeight: '100vh'
       }}
     >
-      <UserForm title='Login' buttonText='Login' />
+      <UserForm
+        title='Login'
+        buttonText='Login'
+        onSubmit={values => {
+          axios
+            .post(
+              'http://team-eagle-new-name-who-dis.herokuapp.com/api/login',
+              values
+            )
+            .then(res => {
+              console.log(values);
+              console.log(res);
+            })
+            .catch(err => {
+              console.log(err);
+            });
+        }}
+      />
     </Flex>
   );
 };

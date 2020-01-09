@@ -1,7 +1,7 @@
 import React from 'react';
-import { Box, Flex, Button } from 'rebass';
+import { Flex } from 'rebass';
 import { UserForm } from '../components/forms';
-import { H1 } from '../components/headings';
+import axios from 'axios';
 
 const RegisterPage = props => {
   return (
@@ -15,7 +15,23 @@ const RegisterPage = props => {
         minHeight: '100vh'
       }}
     >
-      <UserForm title='Register' buttonText='Submit' />
+      <UserForm
+        title='Register'
+        buttonText='Register'
+        onSubmit={values => {
+          axios
+            .post(
+              'http://team-eagle-new-name-who-dis.herokuapp.com/api/registration',
+              values
+            )
+            .then(res => {
+              console.log(res);
+            })
+            .catch(err => {
+              console.log(err);
+            });
+        }}
+      />
     </Flex>
   );
 };
